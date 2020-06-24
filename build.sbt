@@ -38,9 +38,7 @@ val sharedSettings = Seq(
     CrossVersion.partialVersion(v).map(_._2.toInt).getOrElse {
       throw new RuntimeException(s"could not get Scala major version from $v")
     }
-  },
-  publishConfiguration := publishConfiguration.value.withOverwrite(true),
-  publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true),
+  }
 )
 
 lazy val flatland = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure)
