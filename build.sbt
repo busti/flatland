@@ -74,7 +74,7 @@ lazy val bench = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure)
   .settings(
     version := "0.1.0",
     libraryDependencies ++=
-      "com.github.busti.bench" %%% "bench" % "2960c8c" ::
+      "com.github.fdietze.bench" %%% "bench" % "2960c8c" ::
       Nil,
 
     scalacOptions ++= {
@@ -102,5 +102,8 @@ lazy val bench = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure)
     scalaJSUseMainModuleInitializer := true,
     scalaJSLinkerConfig ~= (_.withModuleKind(ModuleKind.CommonJSModule)),
   )
+
+publishConfiguration := publishConfiguration.value.withOverwrite(true)
+publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true)
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
