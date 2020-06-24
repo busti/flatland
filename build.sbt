@@ -49,7 +49,7 @@ lazy val flatland = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pu
     version := "master-SNAPSHOT",
     libraryDependencies ++= (
       "org.scalatest" %%% "scalatest" % "3.1.1" % Test ::
-      "org.scalatestplus" %%% "scalatestplus-scalacheck" % "3.2.0.0" % Test ::
+      "org.scalatestplus" %%% "scalacheck-1-14" % "3.2.0.0" % Test ::
       "org.scalacheck" %%% "scalacheck" % "1.14.3" % Test ::
       Nil
     ),
