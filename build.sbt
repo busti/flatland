@@ -74,7 +74,7 @@ lazy val bench = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure)
   .settings(
     version := "0.1.0",
     libraryDependencies ++=
-      "com.github.fdietze.bench" %%% "bench" % "70387fc" ::
+      "com.github.fdietze.bench" %%% "bench" % "70387fcb57" ::
       Nil,
 
     scalacOptions ++= {
